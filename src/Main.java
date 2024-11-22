@@ -1,12 +1,13 @@
 import java.util.Scanner;
 
 public class Main {
-
+    //Magic Numbers Principle - вместо чисел используем константы
     public static final char RUB = (char) 0x20BD;
 
     public static void main(String[] args) {
-
+        //Liskov substitution principle - наследники класса Product полностью играют роль предка
         Product[] products = {new Kefir(), new Banana(), new Milk(), new Phone()};
+        //принцип DRY - повторяющийся вывод списка продуктов на экран выносим в отдельный метод
         printProucts(products);
         Scanner scanner = new Scanner(System.in);
         while (true) {
